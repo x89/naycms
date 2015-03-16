@@ -1,0 +1,12 @@
+<!doctype html>
+
+{% if session.user %}
+I love you {{ session.user }}
+<br>
+{% endif %}
+
+{% if session.user %}
+<a href="{{ url_for('logout') }}">Logout</a>
+{% else %}
+<a href="{{ url_for('login') }}">Login</a>
+{% endif %}
